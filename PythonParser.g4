@@ -1,17 +1,20 @@
 grammar PythonParser;
 
-start: statement EOF;
+start: NEWLINE* (statement NEWLINE)* statement EOF;
 
 VARIABLE: [A-Za-z_][A-Za-z_0-9]*;
 NUMBER: [0-9]+('.'[0-9]+)?;
 BOOLEAN: 'True' | 'False';
-/* STRING: '';  Need to implement */
-/* ARRAY: ''; Need to implement */
+NEWLINE: '\n'+;
+STRING: '"' (~('\n'| '\r' | '"') | '\\"')* '"'
+    | '\'' (~('\n'| '\r' | '"') | '\\"')* '\'';
 
 /* Need to prevent keywords?? */
 
-statement: VARIABLE '=' arithmetic
-    | VARIABLE '=' BOOLEAN
+
+statement: assignment;
+
+assignment: VARIABLE '=' expression
     | VARIABLE '+=' arithmetic
     | VARIABLE '-=' arithmetic
     | VARIABLE '*=' arithmetic
@@ -24,5 +27,9 @@ arithmetic: '(' arithmetic ')'
     | arithmetic '+' arithmetic
     | arithmetic '-' arithmetic
     | VARIABLE | NUMBER;
+
+expression: arithmetic | VARIABLE | NUMBER | BOOLEAN | STRING | array;
+
+array: '[' ((expression ',')* expression)? ']';
 
 WS : [ \t\r]+ -> skip ;

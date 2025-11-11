@@ -26,12 +26,39 @@ class PythonParserListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by PythonParserParser#assignment.
+    def enterAssignment(self, ctx:PythonParserParser.AssignmentContext):
+        pass
+
+    # Exit a parse tree produced by PythonParserParser#assignment.
+    def exitAssignment(self, ctx:PythonParserParser.AssignmentContext):
+        pass
+
+
     # Enter a parse tree produced by PythonParserParser#arithmetic.
     def enterArithmetic(self, ctx:PythonParserParser.ArithmeticContext):
         pass
 
     # Exit a parse tree produced by PythonParserParser#arithmetic.
     def exitArithmetic(self, ctx:PythonParserParser.ArithmeticContext):
+        pass
+
+
+    # Enter a parse tree produced by PythonParserParser#expression.
+    def enterExpression(self, ctx:PythonParserParser.ExpressionContext):
+        pass
+
+    # Exit a parse tree produced by PythonParserParser#expression.
+    def exitExpression(self, ctx:PythonParserParser.ExpressionContext):
+        pass
+
+
+    # Enter a parse tree produced by PythonParserParser#array.
+    def enterArray(self, ctx:PythonParserParser.ArrayContext):
+        pass
+
+    # Exit a parse tree produced by PythonParserParser#array.
+    def exitArray(self, ctx:PythonParserParser.ArrayContext):
         pass
 
 
