@@ -29,6 +29,5 @@ def test_parser(code_string):
 # Test script
 with open("project_deliverable_1.py", "r") as f:
     test = f.read()
-print(test)
 
 test_parser(test)
