@@ -40,4 +40,4 @@ expression: arithmetic | VARIABLE | NUMBER | BOOLEAN | STRING | array;
 
 array: '[' ((expression ',')* expression)? ']';
 
-WS : [ \t\r]+ -> skip ;
+WS : [ \r]+ -> skip ;
