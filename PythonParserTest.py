@@ -27,7 +27,7 @@ def test_parser(code_string):
         return False
 
 # Test script
-with open("project_deliverable_1.py", "r") as f:
+with open("project_deliverable_2.py", "r") as f:
     test = f.read()
 
 test_parser(test)
