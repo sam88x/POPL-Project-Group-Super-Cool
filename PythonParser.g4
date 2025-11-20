@@ -26,7 +26,15 @@ elif_blocks: elif_block | elif_block elif_blocks;
 elif_block: ELIF conditional ':' block;
 else_block: ELSE ':' block;
 
-conditional: 'test == test';
+conditional: '(' conditional ')'
+    | NOT conditional
+    | conditional AND conditional
+    | conditional OR conditional
+    | arithmetic relational arithmetic
+    | BOOLEAN
+    | arithmetic;
+
+relational: '<' | '<=' | '>' | '>=' | '==' | '!=';
 
 assignment: VARIABLE '=' expression
     | VARIABLE '+=' arithmetic

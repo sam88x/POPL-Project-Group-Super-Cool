@@ -80,6 +80,15 @@ class PythonParserListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by PythonParserParser#relational.
+    def enterRelational(self, ctx:PythonParserParser.RelationalContext):
+        pass
+
+    # Exit a parse tree produced by PythonParserParser#relational.
+    def exitRelational(self, ctx:PythonParserParser.RelationalContext):
+        pass
+
+
     # Enter a parse tree produced by PythonParserParser#assignment.
     def enterAssignment(self, ctx:PythonParserParser.AssignmentContext):
         pass
