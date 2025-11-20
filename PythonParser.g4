@@ -42,6 +42,7 @@ assignment: VARIABLE '=' expression
     | VARIABLE '/=' arithmetic;
 
 arithmetic: '(' arithmetic ')'
+    | '-' arithmetic
     | arithmetic '*' arithmetic 
     | arithmetic '/' arithmetic
     | arithmetic '%' arithmetic
