@@ -44,33 +44,6 @@ class PythonParserListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by PythonParserParser#elif_blocks.
-    def enterElif_blocks(self, ctx:PythonParserParser.Elif_blocksContext):
-        pass
-
-    # Exit a parse tree produced by PythonParserParser#elif_blocks.
-    def exitElif_blocks(self, ctx:PythonParserParser.Elif_blocksContext):
-        pass
-
-
-    # Enter a parse tree produced by PythonParserParser#elif_block.
-    def enterElif_block(self, ctx:PythonParserParser.Elif_blockContext):
-        pass
-
-    # Exit a parse tree produced by PythonParserParser#elif_block.
-    def exitElif_block(self, ctx:PythonParserParser.Elif_blockContext):
-        pass
-
-
-    # Enter a parse tree produced by PythonParserParser#else_block.
-    def enterElse_block(self, ctx:PythonParserParser.Else_blockContext):
-        pass
-
-    # Exit a parse tree produced by PythonParserParser#else_block.
-    def exitElse_block(self, ctx:PythonParserParser.Else_blockContext):
-        pass
-
-
     # Enter a parse tree produced by PythonParserParser#conditional.
     def enterConditional(self, ctx:PythonParserParser.ConditionalContext):
         pass

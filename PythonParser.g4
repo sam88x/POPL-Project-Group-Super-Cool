@@ -19,12 +19,11 @@ VARIABLE: [A-Za-z_][A-Za-z_0-9]*;
 NUMBER: [0-9]+('.'[0-9]+)?;
 
 statement: assignment | if_else_block;
-block: '\t' NEWLINE* (statement NEWLINE)* statement;
+block: '\t' statement (NEWLINE '\t' statement)*;
 
-if_else_block: IF conditional ':' block elif_blocks? else_block?;
-elif_blocks: elif_block | elif_block elif_blocks;
-elif_block: ELIF conditional ':' block;
-else_block: ELSE ':' block;
+if_else_block: IF conditional ':' NEWLINE block
+    (NEWLINE ELIF conditional ':' NEWLINE block)*
+    (NEWLINE ELSE ':' NEWLINE block)?;
 
 conditional: '(' conditional ')'
     | NOT conditional
