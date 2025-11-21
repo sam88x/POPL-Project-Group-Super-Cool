@@ -1,6 +1,6 @@
 grammar PythonParser;
 
-start: NEWLINE* (statement NEWLINE)* statement EOF;
+start: NEWLINE* (statement NEWLINE+)* statement EOF;
 
 BOOLEAN: 'True' | 'False';
 IF: 'if';
@@ -9,7 +9,7 @@ ELSE: 'else';
 AND: 'and';
 OR: 'or';
 NOT: 'not';
-NEWLINE: '\n'+;
+NEWLINE: '\n';
 STRING: '"' (~('\n'| '\r' | '"') | '\\"')* '"'
     | '\'' (~('\n'| '\r' | '"') | '\\"')* '\'';
 
