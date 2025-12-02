@@ -10,7 +10,7 @@ else:
 
 def serializedATN():
     return [
-        4,1,36,185,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+        4,1,37,185,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
         6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,1,0,5,0,24,8,0,10,0,12,0,27,
         9,0,1,0,1,0,4,0,31,8,0,11,0,12,0,32,5,0,35,8,0,10,0,12,0,38,9,0,
         1,0,1,0,1,0,1,1,1,1,1,1,1,1,1,1,5,1,48,8,1,10,1,12,1,51,9,1,1,2,
@@ -101,7 +101,7 @@ class PythonParserParser ( Parser ):
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "BOOLEAN", "IF", "ELIF", "ELSE", "AND", "OR", "NOT", 
                       "WHILE", "NEWLINE", "STRING", "VARIABLE", "NUMBER", 
-                      "WS" ]
+                      "WS", "COMMENT" ]
 
     RULE_start = 0
     RULE_block = 1
@@ -156,6 +156,7 @@ class PythonParserParser ( Parser ):
     VARIABLE=34
     NUMBER=35
     WS=36
+    COMMENT=37
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)

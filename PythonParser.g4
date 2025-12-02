@@ -58,3 +58,5 @@ expression: arithmetic | VARIABLE | NUMBER | BOOLEAN | STRING | array;
 array: '[' ((expression ',')* expression)? ']';
 
 WS : [ \r]+ -> skip ;
+
+COMMENT : (('#' ~[\n\r]*) |( '\'\'\'' .*? '\'\'\'')) -> skip ;
