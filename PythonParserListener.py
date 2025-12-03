@@ -44,6 +44,15 @@ class PythonParserListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by PythonParserParser#for_loop.
+    def enterFor_loop(self, ctx:PythonParserParser.For_loopContext):
+        pass
+
+    # Exit a parse tree produced by PythonParserParser#for_loop.
+    def exitFor_loop(self, ctx:PythonParserParser.For_loopContext):
+        pass
+
+
     # Enter a parse tree produced by PythonParserParser#if_else_block.
     def enterIf_else_block(self, ctx:PythonParserParser.If_else_blockContext):
         pass
