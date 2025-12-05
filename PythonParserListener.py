@@ -89,6 +89,15 @@ class PythonParserListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by PythonParserParser#func_call.
+    def enterFunc_call(self, ctx:PythonParserParser.Func_callContext):
+        pass
+
+    # Exit a parse tree produced by PythonParserParser#func_call.
+    def exitFunc_call(self, ctx:PythonParserParser.Func_callContext):
+        pass
+
+
     # Enter a parse tree produced by PythonParserParser#arithmetic.
     def enterArithmetic(self, ctx:PythonParserParser.ArithmeticContext):
         pass

@@ -48,6 +48,8 @@ assignment: VARIABLE '=' expression
     | VARIABLE '*=' arithmetic
     | VARIABLE '/=' arithmetic;
 
+func_call: VARIABLE '(' (expression (','expression)*)? ')';
+
 arithmetic: '(' arithmetic ')'
     | '-' arithmetic
     | arithmetic '*' arithmetic 
@@ -55,7 +57,7 @@ arithmetic: '(' arithmetic ')'
     | arithmetic '%' arithmetic
     | arithmetic '+' arithmetic
     | arithmetic '-' arithmetic
-    | VARIABLE | NUMBER;
+    | func_call | VARIABLE | NUMBER;
 
 expression: arithmetic | VARIABLE | NUMBER | BOOLEAN | STRING | array;
 
