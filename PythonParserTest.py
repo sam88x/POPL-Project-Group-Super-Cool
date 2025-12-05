@@ -12,7 +12,8 @@ def test_parser(code_string):
         
         parser = PythonParserParser(token_stream)
         tree = parser.start()
-        
+                
+
         if parser.getNumberOfSyntaxErrors() > 0:
             print(f"FAILED: {code_string[:50]}...")
             return False
@@ -24,6 +25,7 @@ def test_parser(code_string):
     except Exception as e:
         print(f"ERROR: {code_string[:50]}...")
         print(f"   {str(e)}")
+        print(type(e))
         return False
 
 # Test script
