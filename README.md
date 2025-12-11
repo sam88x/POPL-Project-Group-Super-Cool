@@ -10,8 +10,8 @@
 ### Project Goal
 The goal of this assignment is to implement a grammar, specifically a context-free grammar in ANTLR, to parse the Python programming language for some version 3.x.
 The parser does not need to be a complete parser of the Python language, as that would be incredibly comprehensive, but should capture key structures of the language.
-The output of the parser is a tree.
-### Expected Features
+The output of the parser is a parse tree.
+### Supported Features
 - Valid Data Types
     - integers
     - floats
@@ -29,16 +29,18 @@ The output of the parser is a tree.
 
 ## Parser Requirements
 - Uses ANTLR4 and requires language to compile CFG
-- Dependencies to run CFG on Python code
+- Parser targets Python 3.x
+- Dependencies to run CFG on Python code:
+    - Need Java installed for ANTLR
     - Connect ANTLR to file to be parsed with Python
     - Need Python3 installed
     - Uses antlr4 library in python
-        - pip install antlr4
+        - `pip install antlr4`
 
 ## Running Instructions
-- Compiles the CFG in ANTLR
-    - antlr4 -Dlanguage=Python3 PythonParser.g4
-- Run the scipt to run CFG on Python file to be parsed
-    - python3 PythonParserTest.py
+- Compile the CFG in ANTLR:
+    - `antlr4 -Dlanguage=Python3 PythonParser.g4`
+- Run the scipt to run CFG on Python file to be parsed:
+    - `python3 PythonParserTest.py`
 
 ## Video Demonstration
