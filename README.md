@@ -9,7 +9,7 @@
 ## Project Description
 ### Project Goal
 The goal of this assignment is to implement a grammar, specifically a context-free grammar in ANTLR, to parse the Python programming language for some version 3.x.
-The parser does not need to be a complete parser of the Python language, as that would be incredibly comprehenzive, but should capture key structures of the language.
+The parser does not need to be a complete parser of the Python language, as that would be incredibly comprehensive, but should capture key structures of the language.
 The output of the parser is a tree.
 ### Expected Features
 - Valid Data Types
@@ -18,7 +18,7 @@ The output of the parser is a tree.
     - arrays
     - booleans
     - strings
-- Arithmetric operators (+, -, *, /, %)
+- Arithmetic operators (+, -, *, /, %)
 - Assignment operators (=, +=, -=, *=, /=)
 - if-elif-else blocks
 - Conditional statements (<, <=, >, >=, !=, and, or, not)
