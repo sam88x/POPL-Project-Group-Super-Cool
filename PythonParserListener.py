@@ -17,21 +17,21 @@ class PythonParserListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by PythonParserParser#block.
-    def enterBlock(self, ctx:PythonParserParser.BlockContext):
-        pass
-
-    # Exit a parse tree produced by PythonParserParser#block.
-    def exitBlock(self, ctx:PythonParserParser.BlockContext):
-        pass
-
-
     # Enter a parse tree produced by PythonParserParser#statement.
     def enterStatement(self, ctx:PythonParserParser.StatementContext):
         pass
 
     # Exit a parse tree produced by PythonParserParser#statement.
     def exitStatement(self, ctx:PythonParserParser.StatementContext):
+        pass
+
+
+    # Enter a parse tree produced by PythonParserParser#block.
+    def enterBlock(self, ctx:PythonParserParser.BlockContext):
+        pass
+
+    # Exit a parse tree produced by PythonParserParser#block.
+    def exitBlock(self, ctx:PythonParserParser.BlockContext):
         pass
 
 
@@ -89,12 +89,12 @@ class PythonParserListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by PythonParserParser#func_call.
-    def enterFunc_call(self, ctx:PythonParserParser.Func_callContext):
+    # Enter a parse tree produced by PythonParserParser#range_func.
+    def enterRange_func(self, ctx:PythonParserParser.Range_funcContext):
         pass
 
-    # Exit a parse tree produced by PythonParserParser#func_call.
-    def exitFunc_call(self, ctx:PythonParserParser.Func_callContext):
+    # Exit a parse tree produced by PythonParserParser#range_func.
+    def exitRange_func(self, ctx:PythonParserParser.Range_funcContext):
         pass
 
 

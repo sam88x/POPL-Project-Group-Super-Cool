@@ -35,12 +35,22 @@ The output of the parser is a parse tree.
     - Connect ANTLR to file to be parsed with Python
     - Need Python3 installed
     - Uses antlr4 library in python
-        - `pip install antlr4`
+        - pip install antlr4
+- Dependency to create abstract syntax tree vizualization from input
+    - Install GraphViz
+        - winget install Graphviz.Graphviz (for windows)
 
 ## Running Instructions
-- Compile the CFG in ANTLR:
-    - `antlr4 -Dlanguage=Python3 PythonParser.g4`
-- Run the scipt to run CFG on Python file to be parsed:
-    - `python3 PythonParserTest.py`
+- Compiles the CFG in ANTLR
+    - antlr4 -Dlanguage=Python3 PythonParser.g4
+- Run the scipt to run CFG on Python file to be parsed
+    - python3 PythonParserTest.py
+- To create tree visualization, run GraphViz on the dot fiel
+    - & "C:\Program Files\Graphviz\bin\dot.exe" -Tpng tree.dot -o tree.png (for windows)
+    - You should adapt the path to dot.exe for your machine if it is installed in a differnt place
 
 ## Video Demonstration
+<video controls width="100%">
+  <source src="demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
