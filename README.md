@@ -50,4 +50,5 @@ The output of the parser is a parse tree.
     - You should adapt the path to dot.exe for your machine if it is installed in a differnt place
 
 ## Video Demonstration
-<iframe width="560" height="315" src="https://www.youtube.com/embed/we-n8IovgD0?si=_s0aq4FQeh3wITw4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+[![Video Demonstration](https://www.youtube.com/embed/we-n8IovgD0?si=_s0aq4FQeh3wITw4)](https://www.youtube.com/embed/we-n8IovgD0?si=_s0aq4FQeh3wITw4)
+
