@@ -1158,8 +1158,7 @@ class PythonParserParser ( Parser ):
                 self.state = 150
                 self.match(PythonParserParser.NUMBER)
                 pass
-            else:
-                raise NoViableAltException(self)
+
 
             self._ctx.stop = self._input.LT(-1)
             self.state = 170
@@ -1186,7 +1185,7 @@ class PythonParserParser ( Parser ):
                         self.arithmetic(8)
                         pass
 
-                    elif la_ == 2:
+                    elif la_ == 3:
                         localctx = PythonParserParser.ArithmeticContext(self, _parentctx, _parentState)
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_arithmetic)
                         self.state = 156
@@ -1199,7 +1198,7 @@ class PythonParserParser ( Parser ):
                         self.arithmetic(7)
                         pass
 
-                    elif la_ == 3:
+                    elif la_ == 4:
                         localctx = PythonParserParser.ArithmeticContext(self, _parentctx, _parentState)
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_arithmetic)
                         self.state = 159
@@ -1212,7 +1211,7 @@ class PythonParserParser ( Parser ):
                         self.arithmetic(6)
                         pass
 
-                    elif la_ == 4:
+                    elif la_ == 5:
                         localctx = PythonParserParser.ArithmeticContext(self, _parentctx, _parentState)
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_arithmetic)
                         self.state = 162
@@ -1451,23 +1450,23 @@ class PythonParserParser ( Parser ):
 
     def arithmetic_sempred(self, localctx:ArithmeticContext, predIndex:int):
             if predIndex == 2:
-                return self.precpred(self._ctx, 7)
+                return self.precpred(self._ctx, 8)
          
 
             if predIndex == 3:
-                return self.precpred(self._ctx, 6)
+                return self.precpred(self._ctx, 7)
          
 
             if predIndex == 4:
-                return self.precpred(self._ctx, 5)
+                return self.precpred(self._ctx, 6)
          
 
             if predIndex == 5:
-                return self.precpred(self._ctx, 4)
+                return self.precpred(self._ctx, 5)
          
 
             if predIndex == 6:
-                return self.precpred(self._ctx, 3)
+                return self.precpred(self._ctx, 4)
          
 
 
